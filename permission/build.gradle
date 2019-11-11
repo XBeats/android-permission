@@ -32,3 +32,15 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+// 发布包相关信息
+ext {
+    bintray_siteUrl = 'https://github.com/XBeats/android-permission' // 项目的主页 例：https://github.com/XBeats/and_swipeback
+    bintray_gitUrl = 'https://github.com/XBeats/android-permission.git' // Git仓库的url 例：https://github.com/XBeats/and_swipeback.git
+    bintray_group = 'com.xbeats' // Maven Group ID for the artifact，一般填你唯一的包名 例：com.aitangba
+    bintray_version = '0.0.1' // This is the library version used when deploying the artifact， 版本号 例：1.0.0
+    bintray_desc = 'Android permission request' // 项目描述 例： Android activity Swipe Back
+    bintray_name = 'AndroidPermission'  // 发布到JCenter上的项目名字 例：SwipeBack
+}
+
+apply from: './upload.gradle'
